@@ -12,14 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := vendor/xiaomi/hongmi
-
 #Hongmi vendor bin
-PRODUCT_COPY_FILES += $(shell test -d  ${LOCAL_PATH}/bin && \
-	  find ${LOCAL_PATH}/bin -type f \
+PRODUCT_COPY_FILES += $(shell test -d  $(LOCAL_PATH)/bin && \
+	  find $(LOCAL_PATH)/bin -type f \
 	  -printf '%p:system/bin/%P\n')
 
+
 #Hongmi vendor lib etc
-PRODUCT_COPY_FILES += $(shell test -d ${LOCAL_PATH}/lib && \
-	  find ${LOCAL_PATH}/lib -type f \
+PRODUCT_COPY_FILES += $(shell test -d $(LOCAL_PATH)/lib && \
+	  find $(LOCAL_PATH)/lib -type f \
 	  -printf '%p:system/lib/%P\n')
