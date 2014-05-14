@@ -17,9 +17,9 @@ LOCAL_PATH := vendor/xiaomi/hongmi
 #Hongmi vendor bin
 PRODUCT_COPY_FILES += $(shell test -d  ${LOCAL_PATH}/bin && \
 	  find ${LOCAL_PATH}/bin -type f \
-	  -printf '%p:system/vendor/bin/%P\n')
+	  -printf '%p:system/bin/%P\n')
 
 #Hongmi vendor lib etc
 PRODUCT_COPY_FILES += $(shell test -d ${LOCAL_PATH}/lib && \
 	  find ${LOCAL_PATH}/lib -type f \
-	  -printf '%p:system/vendor/lib/%P\n')
+	  -printf '%p:system/lib/%P\n')
